@@ -191,7 +191,7 @@ class mssqldb {
 	 */
 	function db_connect() {
 		if ( $this->php_mssql_extension == self::EXT_SQLSRV ) {
-			$this->dbh = sqlsrv_connect( $this->dbhost . ", " . $this->dbport, array( "Database" => $this->dbname, "UID" => $this->dbuser, "PWD" => $this->dbpassword ) );
+			$this->dbh = sqlsrv_connect( $this->dbhost . ( $this->dbport ? ', ' . $this->dbport : "" ), array( "Database" => $this->dbname, "UID" => $this->dbuser, "PWD" => $this->dbpassword ) );
 
 			if ( !$this->dbh ) {
 				// TODO proper log error
