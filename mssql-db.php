@@ -227,8 +227,8 @@ class mssqldb {
 		$this->rows_affected = $this->num_rows = 0;
 		$this->last_error  = '';
 
-		if ( is_resource( $this->result ) )
-			mysql_free_result( $this->result );
+		/*if ( is_resource( $this->result ) )
+			mysql_free_result( $this->result );*/
 	}
 
 	/**
