@@ -1,0 +1,1 @@
+This works for Ubuntu: http://www.virtualhelp.me/applications/54-web-servers/211-installing-php5-mssql-in-ubuntu

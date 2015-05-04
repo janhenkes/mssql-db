@@ -199,7 +199,7 @@ class mssqldb {
 				exit;
 			}
 		} else if ( $this->php_mssql_extension == self::EXT_MSSQL ) {
-			$this->dbh = mssql_connect( $this->dbhost . ( $this->dbport ? ',' . $this->dbport : "" ), $this->dbuser, $this->dbpassword );
+			$this->dbh = mssql_connect( $this->dbhost . ( $this->dbport ? ':' . $this->dbport : "" ), $this->dbuser, $this->dbpassword );
 
 			if ( !$this->dbh ) {
 				// TODO proper log error
